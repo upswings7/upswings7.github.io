@@ -9,9 +9,10 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Favicons -->
-  <link href="assets/img/logo.jpg" rel="icon">
-  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+  <link href="assets/img/logo.jpeg" rel="icon">
+  <link href="assets/img/logo.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -25,55 +26,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
-
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDU9femw4HaSJP_cDflkGqbXHO2zg2K3do",
-      authDomain: "upswing-d1ce0.firebaseapp.com",
-      databaseURL: "https://upswing-d1ce0.firebaseio.com",
-      projectId: "upswing-d1ce0",
-      storageBucket: "upswing-d1ce0.appspot.com",
-      messagingSenderId: "801911237970",
-      appId: "1:801911237970:web:02f66ba689b948200d5e8b",
-      measurementId: "G-CRE44MH2ET"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-    function myFunction() {
-      const user = document.getElementById('username1');
-      const email = document.getElementById('email1');
-      const phone = document.getElementById('phoneno1');
-      database.ref('/users/'+user.value).set({
-          Username: user.value,
-          Email: email.value,
-          Phone: phone.value,
-      })
-}
-  </script>
-<script type="text/javascript">
-	$(document).ready(function() {
-	  $("#success-alert").hide();
-	  $("#myWish").click(function showAlert() {
-	    $("#success-alert").fadeTo(1000, 200).slideUp(500, function() {
-	      $("#success-alert").slideUp(200);
-	      document.getElementById("closeModal").click();
-	    });
-	  });
-	});
-</script>
 
 
 </head>
@@ -129,8 +81,10 @@
 
   <!-- ======= Hero Section ======= -->
   <section class="hero-section" id="hero">
-
-    <div class="wave">
+    <div>
+      <img src="assets/img/hero-bg.png" class="img-fluid">
+    </div>
+    <!--<div class="wave">
 
       <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -139,18 +93,16 @@
           </g>
         </g>
       </svg>
-
-    </div>
-
+    </div>-->
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 hero-text-image">
           <div class="row">
-            <div class="col-lg-7 text-center text-lg-left moveabove">
+            <!--<div class="col-lg-7 text-center text-lg-left moveabove">
               <h1 data-aos="fade-right">AI-Powered</h1>
-			  <h3 data-aos="fade-right" style="color:white; ">Interview Preperation</h3>
+              <h3 data-aos="fade-right" style="color:white; ">Interview Preperation</h3>
               <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Beat the crowd and get dream job</p>
-            </div>
+            </div>-->
             <!-- <div class="col-lg-5 iphone-wrap">
               <img src="assets/img/phone_1.png" alt="Image" class="phone-1" data-aos="fade-right">
               <img src="assets/img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
@@ -207,7 +159,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="">
             <div class="feature-1 text-center">
 				<div class="icon-1">
-			 		<img src="assets\img\sentiment.png" class="icon la" style="width:150px;">               
+			 		<img src="assets\img\Sentiment.png" class="icon la" style="width:150px;">               
           		</div>
 		      <h3 class="mb-3">Sentiment of words</h3>
               <p>Be Careful in selecting your words</p>
@@ -242,33 +194,33 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <div class="row">
-	      		<img class="col-sm-6" src="assets\img\1.png" alt="First slide">
-	      		<img class="col-sm-6" src="assets\img\2.png" alt="First slide">
+			      <div class="row">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\1.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\2.png" alt="First slide">
 		      </div>
 		    </div>
 		    <div class="carousel-item">
 		      <div class="row">
-	      		<img class="col-sm-6" src="assets\img\3.png" alt="First slide">
-	      		<img class="col-sm-6" src="assets\img\4.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\3.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\4.png" alt="First slide">
 		      </div>
 		    </div>
 		    <div class="carousel-item">
 		      <div class="row">
-	      		<img class="col-sm-6" src="assets\img\5.png" alt="First slide">
-	      		<img class="col-sm-6" src="assets\img\1.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\5.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\1.png" alt="First slide">
 		      </div>
 		    </div>
 		    <div class="carousel-item">
 		      <div class="row">
-	      		<img class="col-sm-6" src="assets\img\2.png" alt="First slide">
-	      		<img class="col-sm-6" src="assets\img\3.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\2.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\3.png" alt="First slide">
 		      </div>
 		    </div>
 		    <div class="carousel-item">
 		      <div class="row">
-	      		<img class="col-sm-6" src="assets\img\4.png" alt="First slide">
-	      		<img class="col-sm-6" src="assets\img\5.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\4.png" alt="First slide">
+	      		<img class="col-sm-6 img-fluid" src="assets\img\5.png" alt="First slide">
 		      </div>
 		    </div>
 		  </div>
@@ -356,7 +308,7 @@
       <form>
 	      <!-- Modal Header -->
 	      <div class="modal-header">
-	        <h4 class="modal-title">Your Details</h4>
+	        <h4 class="modal-title">Modal Heading</h4>
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	      </div>
 
@@ -368,13 +320,13 @@
 				  <strong>Success! </strong> Product have added to your wishlist.
 				</div>
 				<div class="form-group">
-					<input type="text" name="username1" class="form-control" placeholder="Name">
+					<input type="text" name="username" class="form-control" placeholder="Name">
 				</div>
 				<div class="form-group">
-					<input type="text" name="email1" class="form-control" placeholder="Email">
+					<input type="text" name="email" class="form-control" placeholder="Email">
 				</div>
 				<div class="form-group">
-					<input type="text" name="phoneno1" class="form-control" placeholder="Phone no">
+					<input type="text" name="phoneno" class="form-control" placeholder="Phone no">
 				</div>
 	        </div>
 	      </div>
@@ -406,7 +358,17 @@
   <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
 
   <script src="assets/js/main.js"></script>
-
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $("#success-alert").hide();
+	  $("#myWish").click(function showAlert() {
+	    $("#success-alert").fadeTo(1000, 200).slideUp(500, function() {
+	      $("#success-alert").slideUp(200);
+	      document.getElementById("closeModal").click();
+	    });
+	  });
+	});
+</script>
 </body>
 
 </html>

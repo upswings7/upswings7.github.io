@@ -366,7 +366,7 @@ section {
 }
 
 .sticky-wrapper .site-navbar .site-menu > li > a:hover, .sticky-wrapper .site-navbar .site-menu > li > a.active {
-  color: #fff !important;
+  color: blue !important;
 }
 
 .sticky-wrapper.is-sticky .burger:before, .sticky-wrapper.is-sticky .burger span, .sticky-wrapper.is-sticky .burger:after {
@@ -648,7 +648,6 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-section {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0% ,rgba(0, 0, 0, 0.1) 0%), url(../img/hero-bg.png);
   position: relative;
 }
 
@@ -671,8 +670,7 @@ section {
 }
 
 .hero-section, .hero-section > .container > .row {
-  height: 100vh;
-  min-height: 880px;
+  height: auto!important;
 }
 
 .hero-section.inner-page {
@@ -806,7 +804,7 @@ section {
 
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 30px 20px;
-  color: #000000;
+  color: black!important;
   display: inline-block;
   text-decoration: none !important;
 }
@@ -816,7 +814,7 @@ section {
 }
 
 .site-navbar .site-navigation .site-menu > li.active > a {
-  color: #fff !important;
+  color: black;
 }
 
 .site-navbar .site-navigation .site-menu .has-children {
@@ -1107,7 +1105,7 @@ section {
   width: 100%;
   height: 2px;
   display: block;
-  background: #fff;
+  background: black;
   border-radius: 2px;
   position: absolute;
   opacity: 1;
@@ -1233,8 +1231,18 @@ section {
 /*
 
 Rishabh
-*/
 
+.modal-dialog {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 20040;
+  overflow: auto;
+  overflow-y: auto;
+}
+*/
 
 
 .modal-header{
@@ -1246,4 +1254,10 @@ Rishabh
 
 .modal-footer{
   padding: .50rem;
+}
+
+.step
+{
+  box-shadow:15px 15px 15px rgba(112, 48, 147,0.5);
+  border-radius: 10px;
 }
