@@ -29,6 +29,44 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDU9femw4HaSJP_cDflkGqbXHO2zg2K3do",
+      authDomain: "upswing-d1ce0.firebaseapp.com",
+      databaseURL: "https://upswing-d1ce0.firebaseio.com",
+      projectId: "upswing-d1ce0",
+      storageBucket: "upswing-d1ce0.appspot.com",
+      messagingSenderId: "801911237970",
+      appId: "1:801911237970:web:02f66ba689b948200d5e8b",
+      measurementId: "G-CRE44MH2ET"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    function myFunction() {
+      const user = document.getElementById('username1');
+      const email = document.getElementById('email1');
+      const phone = document.getElementById('phoneno1');
+      database.ref('/users/'+user.value).set({
+          Username: user.value,
+          Email: email.value,
+          Phone: phone.value,
+      })
+}
+  </script>
+
 
 </head>
 
@@ -403,13 +441,13 @@
 				  <strong>Success! </strong> Product have added to your wishlist.
 				</div>
 				<div class="form-group">
-					<input type="text" name="username" class="form-control" placeholder="Name">
+					<input type="text" name="username1" class="form-control" placeholder="Name">
 				</div>
 				<div class="form-group">
-					<input type="text" name="email" class="form-control" placeholder="Email">
+					<input type="text" name="email1" class="form-control" placeholder="Email">
 				</div>
 				<div class="form-group">
-					<input type="text" name="phoneno" class="form-control" placeholder="Phone no">
+					<input type="text" name="phoneno1" class="form-control" placeholder="Phone no">
 				</div>
 	        </div>
 	      </div>
